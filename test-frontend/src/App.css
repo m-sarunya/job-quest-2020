@@ -1,0 +1,13 @@
+.App {
+  padding: 20px;
+}
+.headCard{
+  padding: 20px;
+}
+.bodyCard{
+  height: 400px;
+  overflow: auto;
+}
+.mainCard{
+  background-color: rgb(215, 174, 241);
+}
