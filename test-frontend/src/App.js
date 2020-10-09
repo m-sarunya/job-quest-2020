@@ -23,7 +23,7 @@ const App = () => {
       setLoading(false)
     })()
   }, [])
-  const onSearch = () => {
+  const onEnter = () => {
     setLoading(true)
     axios.get('https://api.icndb.com/jokes/', {
       params: {
@@ -64,7 +64,7 @@ const App = () => {
               <Input placeholder="Count" onChange={(ev) => { setSearch({ ...search, count: ev.target.value }) }} />
             </Col>
             <Col>
-              <Button onClick={onSearch}>Search</Button>
+              <Button onClick={onEnter}>Enter</Button>
             </Col>
             <Col>
               <Button onClick={onRandom}>Random</Button>
