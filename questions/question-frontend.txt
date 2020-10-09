@@ -1,0 +1,33 @@
+1. Explain the what's similar & difference between cookie / localStorage / sessionStorage.
+
+localStorage 	= ข้อมูลที่จะเก็บไว้ในบราวเซอร์ user ไม่หายไปไหนยกเว้นจะมีการ clear ยกเว้นบราวเซอร์ของเขาพัง
+sessionStorage 	= ข้อมูลที่จะหายไป เมื่อปิดบราวเซอร์
+cookie 		= ในแต่ละ Request ของเว็บไซต์ จะถูกส่งไปด้วย
+
+2. Today React have hooks. Do we still need a class component? If your answer is yes then which case that we still need to use class component.
+
+ตอบ มีบางกรณีที่จำเป็นต้องใช้ class ถ้าเราต้องการใช้ constructor ต้องเขียนแบบ class
+	
+3.Breifly describe how Virtual DOM works.
+
+ตอบ Virtual DOM ทำงานแปลง react เป็น html โดยจะดูการเปลี่ยนแปลงจากนอกสุดก่อนแล้วลึกลงไป ถ้ามีการเปลี่ยนแปลงก็จะ render เฉพาะตรงส่วนนั้น
+
+4.Consider this React's components tree
+
+Apps > ComponentA > ComponentB > ComponentC > ComponentD > ComponentE
+
+If we have a state at Apps component, and ComponentE component want to access that state value. How do you implements this?
+
+ตอบ  สามารถใช้ redux เพื่อเป็น global state ที่ทุก component สามารถเรียกใช้ state ได้
+
+5. What different between using relative / absolute / fixed to position the element.
+
+ตอบ	relative จะแสดงผลต่อจาก ณ จุดที่มันอยู่ตรงนั้น 
+	fixed ตำแหน่ง element จะขึ้นอยู่กับ browser window
+	absolute ตำแหน่ง element จะอยู่ภายใต้ element อีกที
+
+6.Explain the different between using callback / Promise / async await. When to use and when not to.
+ตอบ	callback คือ function ที่จะถูกเรียกหลัง function อื่นทำงานเสร็จ ทำงานเป็นแบบ synchronous ใช้เมื่อต้องการเรียกใช้งานแบบเป็นขั้นตอน ถ้ามีการทำงานมากเกินไปจะช้า
+	Promise	คือ การทำงานแบบ asynchronous จะต้องรอการทำงานทั้งหมดก่อนถึงทำ 
+	async await คือ ทำงานแบบ asynchronous จะต้องรอการทำงานเฉพาะที่ await ไว้
+	
